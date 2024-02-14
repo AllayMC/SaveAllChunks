@@ -17,7 +17,7 @@ LL_AUTO_TYPE_INSTANCE_HOOK(
     NonActorDataNeedsSavingHook,
     ll::memory::HookPriority::Normal,
     LevelChunk,
-    "nonActorDataNeedsSaving@LevelChunk@@QEBA_NHH@Z",
+    "?nonActorDataNeedsSaving@LevelChunk@@QEBA_NHH@Z",
     bool,
     int,
     int
