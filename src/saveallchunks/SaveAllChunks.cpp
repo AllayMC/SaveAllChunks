@@ -14,7 +14,7 @@ namespace save_all_chunks {
 namespace {
 
 LL_AUTO_TYPE_INSTANCE_HOOK(
-    NonActorDataNeedsSavingHook,
+    HOOK1,
     ll::memory::HookPriority::Normal,
     LevelChunk,
     "?nonActorDataNeedsSaving@LevelChunk@@QEBA_NHH@Z",
@@ -24,6 +24,28 @@ LL_AUTO_TYPE_INSTANCE_HOOK(
 ) {
     return true;
 }
+
+LL_AUTO_TYPE_INSTANCE_HOOK(
+    HOOK2,
+    ll::memory::HookPriority::Normal,
+    LevelChunk,
+    "?shouldSaveIfNeverSaved@LevelChunk@@QEBA_NXZ",
+    bool
+) {
+    return true;
+}
+
+LL_AUTO_TYPE_INSTANCE_HOOK(
+    HOOK3,
+    ll::memory::HookPriority::Normal,
+    LevelChunk,
+    "?shouldSaveNonActorDataIfDirty@LevelChunk@@QEBA_NXZ",
+    bool
+) {
+    return true;
+}
+
+
 
 std::unique_ptr<std::reference_wrapper<ll::plugin::NativePlugin>> selfPluginInstance; // NOLINT(cppcoreguidelines-avoid-non-const-global-variables)
 
