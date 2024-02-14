@@ -2,7 +2,7 @@
 
 #include <ll/api/plugin/NativePlugin.h>
 
-namespace change_this {
+namespace save_all_chunks {
 
 [[nodiscard]] auto getSelfPluginInstance() -> ll::plugin::NativePlugin&;
 

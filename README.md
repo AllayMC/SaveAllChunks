@@ -1,35 +1,15 @@
-# LeviLamina Plugin Template
+# SaveAllChunks
+Mod for BDS to force it to save all chunks, useful for exporting vanilla maps for custom server use
 
-A LeviLamina plugin template
+## Background
+If you've tried to import a freshly generated world from MCPE to a custom server in recent Minecraft versions, you probably noticed the end result doesn't look so great - usually being riddled with missing chunks and being basically unrecognizable unless built-up by players.
 
-This plugin is a template for developing LeviLamina plugins.
+This is because Bedrock tries to be smart about what it saves - if a chunk wasn't modified by a player since being loaded, it won't save it, since it can just regenerate it when the game is next opened.
 
-## Install
+While this is cool for reducing the size of world saves, it's very inconvenient when you want to export the world to somewhere that doesn't support vanilla world generation, such as a custom server.
 
-Generate a new repository from this template.
+This mod makes disables this smart mechanism and forces the server to always save all chunks, regardless of whether they've been modified or not.
 
-## Usage
+## Reference
 
-Before using this plugin template, make sure that you have installed XMake and a Minecraft Bedrock Server with LeviLamina.
-
-1. Clone the new repository into a local folder.
-
-1. Change the plugin name and the expected LeviLamina version in `xmake.lua`.
-
-1. Add your code.
-
-1. Run `xmake repo -u` in the root of the repository.
-
-1. Run `xmake` to build the plugin.
-
-Now the build is complete at `bin/`.
-
-## Contributing
-
-Ask questions by [creating an issue](https://github.com/LiteLDev/levilamina-plugin-template/issues/new/choose).
-
-PRs accepted.
-
-## License
-
-CC0-1.0 © LiteLDev
+[pmmp-save-all-chunks](https://github.com/pmmp/bds-mod-saveallchunks)

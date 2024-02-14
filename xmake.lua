@@ -8,7 +8,7 @@ if not has_config("vs_runtime") then
     set_runtimes("MD")
 end
 
-target("change-this") -- Change this to your plugin name.
+target("SaveAllChunks") -- Change this to your plugin name.
     add_cxflags(
         "/EHa", -- To catch both structured (asynchronous) and standard C++ (synchronous) exceptions.
         "/utf-8" -- To enable UTF-8 source code.
